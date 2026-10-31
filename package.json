@@ -6,7 +6,9 @@
     "dev": "wrangler dev",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy --env=\"\"",
+    "deploy:preview": "wrangler deploy --env preview",
+    "check": "node scripts/check.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",

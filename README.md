@@ -11,8 +11,8 @@ Personal site of Oğuz Soykan — static HTML/CSS/JS served by Cloudflare Worker
 npm install
 npx wrangler dev                      # local preview
 node scripts/check.mjs http://localhost:8787/
-npx wrangler deploy --env preview     # https://preview.oguzsoykan.com
-npx wrangler deploy                   # https://oguzsoykan.com
+npm run deploy:preview                # https://preview.oguzsoykan.com
+npm run deploy                        # https://oguzsoykan.com (top-level env, explicit)
 ```
 
 The live demo it links to is [Workflow Builder](https://workflow.oguzsoykan.com/) ([source](https://github.com/OguzSoykan/Workflow-Builder)).
