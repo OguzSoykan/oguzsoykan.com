@@ -9,6 +9,7 @@
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@playwright/test": "^1.58.2",
     "pixelmatch": "^8.0.0",
     "pngjs": "^7.0.0",

@@ -33,11 +33,11 @@
     <title>Oğuz Soykan · Full-stack Geliştirici</title>
     <meta
       name="description"
-      content="Oğuz Soykan, İstanbul'da full-stack geliştirici. .NET ve React ile 2.000+ kişinin kullandığı kurumsal uygulamalar, RPA ile süreç otomasyonu."
+      content="Oğuz Soykan, İstanbul'da full-stack geliştirici. .NET ve React ile 2.000+ kişinin kullandığı kurumsal uygulamalar, RPA ile süreç otomasyonu ve canlı Workflow Builder demosu."
     />
     <link rel="canonical" href="https://oguzsoykan.com/" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="theme-color" content="#fafaf8" />
+    <meta name="theme-color" content="#f6f6f2" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:locale:alternate" content="en_US" />
@@ -77,7 +77,11 @@
           "addressLocality": "İstanbul",
           "addressCountry": "TR"
         },
-        "sameAs": ["https://github.com/OguzSoykan", "https://www.linkedin.com/in/oguzsoykan"]
+        "sameAs": [
+          "https://github.com/OguzSoykan",
+          "https://www.linkedin.com/in/oguzsoykan",
+          "https://workflow.oguzsoykan.com/"
+        ]
       }
     </script>
     <link
@@ -101,11 +105,11 @@
       ><span data-l="tr">İçeriğe geç</span><span data-l="en">Skip to content</span></a
     >
     <header class="topbar">
-      <div class="wrap nav-inner">
-        <a href="#main" class="monogram" aria-label="Oğuz Soykan">OS<i>.</i></a>
-        <nav aria-label="Bölümler / Sections">
-          <a href="#projects" data-nav="projects"
-            ><span data-l="tr">Projeler</span><span data-l="en">Projects</span></a
+      <div class="wrap topbar-inner">
+        <a href="#main" class="monogram">OS<i>.</i><span class="sr-only"> Oğuz Soykan</span></a>
+        <nav class="nav" aria-label="Bölümler / Sections">
+          <a href="#work" data-nav="work"
+            ><span data-l="tr">Projeler</span><span data-l="en">Work</span></a
           ><a href="#experience" data-nav="experience"
             ><span data-l="tr">Deneyim</span><span data-l="en">Experience</span></a
           ><a href="#about" data-nav="about"
@@ -115,11 +119,15 @@
           >
         </nav>
         <div class="settings">
+          <a class="demo-pill" href="https://workflow.oguzsoykan.com/" rel="noopener"
+            ><span class="live-dot" aria-hidden="true"></span><span data-l="tr">Canlı demo</span
+            ><span data-l="en">Live demo</span><span aria-hidden="true">↗</span></a
+          >
           <div class="languages" role="group" aria-label="Dil / Language">
-            <button type="button" data-language="tr" aria-pressed="true" aria-label="Türkçe">
-              TR</button
-            ><span aria-hidden="true">/</span
-            ><button type="button" data-language="en" aria-pressed="false" aria-label="English">
+            <button type="button" data-language="tr" aria-pressed="true" aria-label="TR · Türkçe">
+              TR
+            </button>
+            <button type="button" data-language="en" aria-pressed="false" aria-label="EN · English">
               EN
             </button>
           </div>
@@ -134,7 +142,7 @@
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.5"
+              stroke-width="1.6"
               aria-hidden="true"
             >
               <circle cx="12" cy="12" r="4" />
@@ -146,7 +154,7 @@
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.5"
+              stroke-width="1.6"
               aria-hidden="true"
             >
               <path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z" />
@@ -155,177 +163,284 @@
         </div>
       </div>
     </header>
-    <div class="header-progress" aria-hidden="true"></div>
+
     <main id="main" tabindex="-1">
+      <!-- Hero -->
       <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-top">
-          <p class="eyebrow">Full-stack Developer · İstanbul</p>
-          <span class="edition">.NET / REACT / RPA</span>
-        </div>
-        <div class="hero-title">
+        <div class="hero-copy">
+          <p class="status-chip">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span data-l="tr">Sanko Holding · Junior Software Developer</span
+            ><span data-l="en">Sanko Holding · Junior Software Developer</span>
+          </p>
           <h1 id="hero-title">
-            <span class="name-line">OĞUZ</span><span class="name-line">SOYKAN</span>
-          </h1>
-          <div class="hero-lead">
-            <p>
-              <span data-l="tr"
-                >Bir işin nasıl yürüdüğünü anlayıp onu daha iyi çalıştıracak yazılımlar
+            <span class="hero-name">Oğuz Soykan</span>
+            <span class="hero-statement"
+              ><span data-l="tr"
+                >İşin nasıl yürüdüğünü anlıyor, onu <em>daha iyi çalıştıran</em> yazılımlar
                 geliştiriyorum.</span
               ><span data-l="en"
-                >I understand how work gets done, then build software that makes it work
-                better.</span
-              >
-            </p>
-            <p>
-              <span data-l="tr">Full-stack geliştirme · süreç otomasyonu · yapay zekâ</span
-              ><span data-l="en">Full-stack development · process automation · AI</span>
-            </p>
+                >I learn how the work gets done, then build software that makes it
+                <em>work better</em>.</span
+              ></span
+            >
+          </h1>
+          <p class="hero-lead">
+            <span data-l="tr"
+              >İstanbul’da full-stack geliştiriciyim. .NET ve React ile 2.000+ kişinin kullandığı
+              kurumsal uygulamalar geliştiriyor, RPA ve yapay zekâ ile süreçleri
+              otomatikleştiriyorum.</span
+            ><span data-l="en"
+              >Full-stack developer in İstanbul. I build enterprise apps used by 2,000+ people with
+              .NET and React, and automate processes with RPA and AI.</span
+            >
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work"
+              ><span data-l="tr">Projeleri gör</span><span data-l="en">See the work</span
+              ><span aria-hidden="true">↓</span></a
+            >
+            <a class="button" href="https://workflow.oguzsoykan.com/" rel="noopener"
+              ><span data-l="tr">Workflow Builder demosu</span
+              ><span data-l="en">Workflow Builder demo</span><span aria-hidden="true">↗</span></a
+            >
           </div>
-        </div>
-        <div class="hero-bottom">
-          <div class="socials">
-            <a href="https://github.com/OguzSoykan">GitHub</a
-            ><a href="https://www.linkedin.com/in/oguzsoykan">LinkedIn</a
-            ><a href="mailto:oguz.soykan03@gmail.com"
+          <div class="hero-links">
+            <a href="https://github.com/OguzSoykan">GitHub</a>
+            <a href="https://www.linkedin.com/in/oguzsoykan">LinkedIn</a>
+            <a href="mailto:oguz.soykan03@gmail.com"
               ><span data-l="tr">E-posta</span><span data-l="en">Email</span></a
             >
           </div>
-          <a href="#projects" class="scroll-cue"
-            ><span class="scroll-mark" aria-hidden="true"></span
-            ><span data-l="tr">Çalışmaları keşfet</span><span data-l="en">Explore the work</span></a
+        </div>
+        <a class="hero-feature" href="#workflow-builder">
+          <span class="feature-tag"
+            ><span class="live-dot" aria-hidden="true"></span
+            ><span data-l="tr">Yeni · canlı yayında</span
+            ><span data-l="en">New · live now</span></span
+          >
+          <span class="hero-shot">
+            <img
+              class="shot-light"
+              src="assets/img/workflow-builder-light.jpg"
+              alt=""
+              width="2040"
+              height="1230"
+              fetchpriority="high"
+            /><img
+              class="shot-dark"
+              src="assets/img/workflow-builder-dark.jpg"
+              alt=""
+              width="2040"
+              height="1230"
+            />
+          </span>
+          <span class="hero-feature-caption">
+            <strong>Workflow Builder</strong>
+            <span data-l="tr">Doğal dilden iş akışı · simülasyon · AI</span
+            ><span data-l="en">Workflows from plain language · simulation · AI</span>
+          </span>
+        </a>
+      </section>
+
+      <section class="wrap stats" aria-label="Öne çıkan rakamlar / Highlights">
+        <div class="stat">
+          <strong><span data-l="tr">2.000+</span><span data-l="en">2,000+</span></strong>
+          <span
+            ><span data-l="tr">kullanıcıya ulaşan kurumsal uygulamalar</span
+            ><span data-l="en">users on the enterprise apps I built</span></span
           >
         </div>
-        <div class="hero-projects">
-          <a href="#cuzdan"
-            ><div class="mini-art" aria-hidden="true">
-              <svg viewBox="0 0 206 124">
-                <rect
-                  x="10"
-                  y="12"
-                  width="132"
-                  height="87"
-                  rx="4"
-                  fill="var(--surface)"
-                  stroke="var(--line)"
-                />
-                <path
-                  d="M10 27h132M22 44h34M22 57h84M22 70h84M22 83h84"
-                  stroke="var(--line)"
-                  stroke-width="3"
-                />
-                <path d="M112 57h18M112 70h18M112 83h18" stroke="currentColor" stroke-width="3" />
-                <rect
-                  x="149"
-                  y="15"
-                  width="44"
-                  height="89"
-                  rx="8"
-                  fill="var(--surface)"
-                  stroke="currentColor"
-                />
-                <rect x="159" y="35" width="24" height="48" fill="var(--soft)" />
-                <path d="M153 59h37" stroke="currentColor" stroke-width="2" />
-              </svg>
-            </div>
-            <span class="mini-caption"><span>Cüzdan</span><small>01 / 04</small></span></a
-          ><a href="#sanflex"
-            ><div class="mini-art" aria-hidden="true">
-              <svg viewBox="0 0 206 124">
-                <rect
-                  x="16"
-                  y="12"
-                  width="174"
-                  height="94"
-                  rx="4"
-                  fill="var(--surface)"
-                  stroke="var(--line)"
-                />
-                <path d="M16 27h174M30 40h145" stroke="var(--line)" stroke-width="3" />
-                <path d="M30 40h90" stroke="currentColor" stroke-width="3" />
-                <g fill="var(--accent-soft)" stroke="currentColor">
-                  <rect x="30" y="53" width="67" height="18" rx="2" />
-                  <rect x="108" y="53" width="67" height="18" rx="2" />
-                  <rect x="30" y="79" width="67" height="18" rx="2" />
-                </g>
-                <rect x="108" y="79" width="67" height="18" rx="2" fill="var(--soft)" />
-                <path d="m82 60 3 3 5-6M160 60l3 3 5-6" fill="none" stroke="currentColor" />
-              </svg>
-            </div>
-            <span class="mini-caption"><span>SanFlex</span><small>02 / 04</small></span></a
-          ><a href="#rpa"
-            ><div class="mini-art" aria-hidden="true">
-              <svg viewBox="0 0 206 124">
-                <g fill="var(--surface)" stroke="var(--line)">
-                  <rect x="8" y="46" width="40" height="32" />
-                  <rect x="158" y="46" width="40" height="32" />
-                </g>
-                <path d="M48 62h27M132 62h26" stroke="currentColor" />
-                <rect
-                  x="78"
-                  y="34"
-                  width="51"
-                  height="52"
-                  rx="8"
-                  fill="var(--accent-soft)"
-                  stroke="currentColor"
-                />
-                <path d="M104 34V23M95 23h18M94 73h20" stroke="currentColor" />
-                <circle cx="93" cy="55" r="3" fill="currentColor" />
-                <circle cx="115" cy="55" r="3" fill="currentColor" />
-              </svg>
-            </div>
-            <span class="mini-caption"><span>RPA</span><small>03 / 04</small></span></a
-          ><a href="#biik"
-            ><div class="mini-art" aria-hidden="true">
-              <svg viewBox="0 0 206 124">
-                <g stroke="currentColor" opacity=".4">
-                  <path d="M103 62 48 20M103 62 166 28M103 62 161 104M103 62 37 98" />
-                </g>
-                <circle cx="103" cy="62" r="23" fill="var(--accent-soft)" stroke="currentColor" />
-                <g fill="var(--surface)" stroke="currentColor">
-                  <circle cx="48" cy="20" r="10" />
-                  <circle cx="166" cy="28" r="13" />
-                  <circle cx="161" cy="104" r="10" />
-                  <circle cx="37" cy="98" r="13" />
-                </g>
-                <path d="M95 62h16M103 54v16" stroke="currentColor" />
-              </svg>
-            </div>
-            <span class="mini-caption"><span>BiIK</span><small>04 / 04</small></span></a
+        <div class="stat">
+          <strong>4</strong>
+          <span
+            ><span data-l="tr">canlıda çalışan RPA robotu</span
+            ><span data-l="en">RPA robots in production</span></span
+          >
+        </div>
+        <div class="stat">
+          <strong><span data-l="tr">%92</span><span data-l="en">92%</span></strong>
+          <span
+            ><span data-l="tr">özel OCR modelinde doğruluk</span
+            ><span data-l="en">accuracy on a custom OCR model</span></span
+          >
+        </div>
+        <div class="stat">
+          <strong id="work-duration-short">2+</strong>
+          <span
+            ><span data-l="tr">yıl üretimde yazılım geliştirme</span
+            ><span data-l="en">years shipping production software</span></span
           >
         </div>
       </section>
-      <section class="project-list" id="projects" aria-labelledby="projects-title">
-        <div class="wrap work-intro reveal">
-          <div>
-            <p class="section-kicker">
-              <span data-l="tr">Seçilmiş çalışmalar</span><span data-l="en">Selected work</span> ·
-              01—04
-            </p>
-            <h2 id="projects-title">
-              <span data-l="tr">Geliştirdiğim<br />sistemler.</span
-              ><span data-l="en">Systems<br />I’ve built.</span>
-            </h2>
-          </div>
-          <p>
+
+      <!-- Work -->
+      <section id="work" class="work" aria-labelledby="work-title">
+        <div class="wrap section-head">
+          <p class="kicker">
+            <span data-l="tr">Seçilmiş çalışmalar</span><span data-l="en">Selected work</span>
+          </p>
+          <h2 id="work-title">
+            <span data-l="tr">Geliştirdiğim sistemler.</span
+            ><span data-l="en">Systems I’ve built.</span>
+          </h2>
+          <p class="section-lead">
             <span data-l="tr"
-              >Kodun arkasındaki sorumluluk. Arayüzden backend’e, ilk sürümden canlı
-              kullanıma.</span
+              >Arayüzden backend’e, ilk sürümden canlı kullanıma kadar sorumluluğunu aldığım
+              işler.</span
             ><span data-l="en"
-              >The responsibility behind the code. From interface to backend, first release to
+              >Work I owned end to end — from interface to backend, first release to
               production.</span
             >
           </p>
         </div>
-        <article class="project scene-cuzdan" id="cuzdan" aria-labelledby="cuzdan-title">
-          <div class="project-heading wrap reveal">
-            <div>
+
+        <!-- Featured: Workflow Builder -->
+        <article class="featured" id="workflow-builder" aria-labelledby="wb-title">
+          <div class="wrap featured-inner">
+            <div class="featured-copy">
+              <p class="eyebrow">
+                <span data-l="tr">Kişisel proje · Canlı demo</span
+                ><span data-l="en">Personal project · Live demo</span>
+              </p>
+              <h3 id="wb-title">Workflow Builder</h3>
+              <p class="featured-summary">
+                <span data-l="tr"
+                  >Onay süreçlerini sürükle-bırak ile tasarlayan, doğrulayan ve adım adım simüle
+                  eden bir iş akışı editörü. Süreci doğal dille anlattığında yapay zekâ çalışan bir
+                  akış öneriyor; sen onaylamadan taslağına dokunmuyor.</span
+                ><span data-l="en"
+                  >A workflow editor for designing, validating and simulating approval processes
+                  step by step. Describe the process in plain language and AI proposes a runnable
+                  flow — nothing changes until you approve it.</span
+                >
+              </p>
+              <ul class="feature-list">
+                <li>
+                  <b
+                    ><span data-l="tr">Görsel editör</span><span data-l="en">Visual editor</span></b
+                  >
+                  <span data-l="tr">Koşul, onay ve bitiş adımları; anlık doğrulama, geri al.</span
+                  ><span data-l="en"
+                    >Condition, approval and end steps; live validation, undo.</span
+                  >
+                </li>
+                <li>
+                  <b><span data-l="tr">Simülasyon</span><span data-l="en">Simulation</span></b>
+                  <span data-l="tr">Girdi değerleriyle akışı çalıştır, kararları tek tek ver.</span
+                  ><span data-l="en">Run the flow with inputs and make each decision.</span>
+                </li>
+                <li>
+                  <b
+                    ><span data-l="tr">AI ile oluştur</span
+                    ><span data-l="en">Create with AI</span></b
+                  >
+                  <span data-l="tr">OpenAI yapılandırılmış çıktı; bütçe sınırı ve günlük kota.</span
+                  ><span data-l="en">OpenAI structured outputs; budget cap and daily quota.</span>
+                </li>
+                <li>
+                  <b
+                    ><span data-l="tr">Hesap ve bulut</span
+                    ><span data-l="en">Accounts &amp; cloud</span></b
+                  >
+                  <span data-l="tr">Firebase Auth, revizyonlu bulut kaydı (D1).</span
+                  ><span data-l="en">Firebase Auth, revisioned cloud saves (D1).</span>
+                </li>
+              </ul>
+              <dl class="metrics">
+                <div>
+                  <dt>
+                    <span data-l="tr">otomatik test</span><span data-l="en">automated tests</span>
+                  </dt>
+                  <dd>549</dd>
+                </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">erişilebilirlik</span><span data-l="en">accessibility</span>
+                  </dt>
+                  <dd>WCAG AA</dd>
+                </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">AI değerlendirmesi</span
+                    ><span data-l="en">AI evaluation</span>
+                  </dt>
+                  <dd>19/20</dd>
+                </div>
+              </dl>
+              <p class="stack">
+                React 19 · TypeScript · React Flow · Hono · Cloudflare Workers · D1 · Durable
+                Objects · Firebase Auth · OpenAI · Zod · Playwright
+              </p>
+              <div class="featured-actions">
+                <a class="button primary" href="https://workflow.oguzsoykan.com/" rel="noopener"
+                  ><span data-l="tr">Demoyu aç</span><span data-l="en">Open the demo</span
+                  ><span aria-hidden="true">↗</span></a
+                >
+                <a
+                  class="button on-dark"
+                  href="https://github.com/OguzSoykan/Workflow-Builder"
+                  rel="noopener"
+                  ><span data-l="tr">Kaynak kod</span><span data-l="en">Source code</span
+                  ><span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+            <figure class="featured-visual">
+              <div class="browser">
+                <div class="browser-bar" aria-hidden="true">
+                  <span class="dots"><i></i><i></i><i></i></span>
+                  <span class="url">workflow.oguzsoykan.com</span>
+                </div>
+                <img
+                  class="shot-light"
+                  src="assets/img/workflow-builder-light.jpg"
+                  alt="Workflow Builder: satın alma talebi akışı simülasyonda, yönetici onayı bekleniyor"
+                  width="2040"
+                  height="1230"
+                  loading="lazy"
+                /><img
+                  class="shot-dark"
+                  src="assets/img/workflow-builder-dark.jpg"
+                  alt="Workflow Builder: purchase request flow in simulation, waiting for manager approval"
+                  width="2040"
+                  height="1230"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span data-l="tr">Gerçek ekran görüntüsü · örnek akış</span
+                ><span data-l="en">Real screenshot · sample flow</span>
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <div class="wrap project-grid">
+          <!-- Cüzdan -->
+          <article class="project" id="cuzdan" aria-labelledby="cuzdan-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 206 124">
+                <rect x="10" y="12" width="132" height="87" rx="4" class="a-surface" />
+                <path
+                  d="M10 27h132M22 44h34M22 57h84M22 70h84M22 83h84"
+                  class="a-line"
+                  stroke-width="3"
+                />
+                <path d="M112 57h18M112 70h18M112 83h18" class="a-ink" stroke-width="3" />
+                <rect x="149" y="15" width="44" height="89" rx="8" class="a-surface a-ink" />
+                <rect x="159" y="35" width="24" height="48" class="a-soft" />
+                <path d="M153 59h37" class="a-ink" stroke-width="2" />
+              </svg>
+              <span class="project-num">01</span>
+            </div>
+            <div class="project-body">
               <p class="eyebrow">
                 <span data-l="tr">Sanko Holding · Masraf yönetim platformu</span
                 ><span data-l="en">Sanko Holding · Expense management platform</span>
               </p>
-              <h3 class="project-title" id="cuzdan-title">Cüzdan</h3>
-              <p class="project-summary">
+              <h3 id="cuzdan-title">Cüzdan</h3>
+              <p>
                 <span data-l="tr"
                   >Masraf yönetim platformunun backend API’sini ve React arayüzünü geliştirdim;
                   ardından tüm sorumluluğunu devraldım.</span
@@ -334,270 +449,77 @@
                   full responsibility for it.</span
                 >
               </p>
-            </div>
-            <span class="project-index">01<br />/ 04</span>
-          </div>
-          <figure class="scene-track" data-scene="cuzdan">
-            <div class="scene-sticky" aria-hidden="true">
-              <div class="scene-stage">
-                <div class="scene-meta">
-                  <span class="scene-overline"
-                    ><span data-l="tr">Temsili arayüz</span
-                    ><span data-l="en">Illustrative interface</span></span
-                  ><span>.NET / React</span>
+              <dl class="metrics small">
+                <div>
+                  <dt><span data-l="tr">kullanıcı</span><span data-l="en">users</span></dt>
+                  <dd><span data-l="tr">2.000+</span><span data-l="en">2,000+</span></dd>
                 </div>
-                <span class="scene-ghost">CÜZDAN</span>
-                <div class="scene-object wallet-stage">
-                  <div class="browser">
-                    <div class="browser-chrome">
-                      <span class="window-dots"><i></i><i></i><i></i></span
-                      ><span
-                        >cüzdan / <span data-l="tr">masraflarım</span
-                        ><span data-l="en">my expenses</span></span
-                      ><span class="chrome-end">↗</span>
-                    </div>
-                    <div class="app-body">
-                      <div class="app-heading">
-                        <div>
-                          <span class="eyebrow">CÜZDAN</span>
-                          <h4>
-                            <span data-l="tr">Masraflarım</span><span data-l="en">My expenses</span>
-                          </h4>
-                        </div>
-                        <span class="app-action"
-                          >+ <span data-l="tr">Yeni masraf</span
-                          ><span data-l="en">New expense</span></span
-                        >
-                      </div>
-                      <div class="summary-strip">
-                        <div>
-                          <span data-l="tr">Bu ay</span><span data-l="en">This month</span
-                          ><b>₺8.450,00</b>
-                        </div>
-                        <div>
-                          <span data-l="tr">Onay bekleyen</span
-                          ><span data-l="en">Awaiting approval</span><b>3</b>
-                        </div>
-                        <div>
-                          <span data-l="tr">Tamamlanan</span><span data-l="en">Completed</span
-                          ><b>12</b>
-                        </div>
-                      </div>
-                      <table class="expense-table">
-                        <caption class="sr-only">
-                          <span data-l="tr">Örnek masraf listesi</span
-                          ><span data-l="en">Sample expense list</span>
-                        </caption>
-                        <thead>
-                          <tr>
-                            <th><span data-l="tr">Masraf</span><span data-l="en">Expense</span></th>
-                            <th><span data-l="tr">Tarih</span><span data-l="en">Date</span></th>
-                            <th><span data-l="tr">Tutar</span><span data-l="en">Amount</span></th>
-                            <th><span data-l="tr">Durum</span><span data-l="en">Status</span></th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <span class="expense-icon">▤</span><span data-l="tr">İş yemeği</span
-                              ><span data-l="en">Business lunch</span><small>ÖRNEK KAFE LTD.</small>
-                            </td>
-                            <td>09.10</td>
-                            <td>₺1.250</td>
-                            <td>
-                              <span class="status pending"
-                                ><span data-l="tr">Onayda</span
-                                ><span data-l="en">Pending</span></span
-                              >
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span class="expense-icon">▤</span><span data-l="tr">Ulaşım</span
-                              ><span data-l="en">Transport</span
-                              ><small
-                                ><span data-l="tr">ÖRNEK ULAŞIM A.Ş.</span
-                                ><span data-l="en">SAMPLE TRANSPORT CO.</span></small
-                              >
-                            </td>
-                            <td>08.10</td>
-                            <td>₺680</td>
-                            <td>
-                              <span class="status approved"
-                                ><span data-l="tr">Onaylandı</span
-                                ><span data-l="en">Approved</span></span
-                              >
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span class="expense-icon">▤</span><span data-l="tr">Ofis gideri</span
-                              ><span data-l="en">Office expense</span
-                              ><small
-                                ><span data-l="tr">ÖRNEK MAĞAZA LTD.</span
-                                ><span data-l="en">SAMPLE STORE LTD.</span></small
-                              >
-                            </td>
-                            <td>07.10</td>
-                            <td>₺425</td>
-                            <td>
-                              <span class="status pending"
-                                ><span data-l="tr">Düzeltme</span
-                                ><span data-l="en">Revision</span></span
-                              >
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="app-foot">
-                        <span data-l="tr">Örnek veri · 3 masraf gösteriliyor</span
-                        ><span data-l="en">Sample data · Showing 3 expenses</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="phone">
-                    <div class="phone-top"><span>9:41</span><span>•••</span></div>
-                    <div class="phone-heading">
-                      <span data-l="tr">Fiş tara</span><span data-l="en">Scan receipt</span
-                      ><span class="scan-icon">⌗</span>
-                    </div>
-                    <div class="scan-area">
-                      <div class="receipt">
-                        <b>ÖRNEK KAFE LTD.</b
-                        ><small
-                          ><span data-l="tr">TEMSİLİ FİŞ</span
-                          ><span data-l="en">SAMPLE RECEIPT</span></small
-                        >
-                        <div class="receipt-rule"></div>
-                        <div class="ocr-box"><span>VKN</span><b>0000000000</b></div>
-                        <div class="ocr-box">
-                          <span><span data-l="tr">Tarih</span><span data-l="en">Date</span></span
-                          ><b>09.10.2026</b>
-                        </div>
-                        <p>
-                          <span data-l="tr">İş yemeği</span><span data-l="en">Business lunch</span
-                          ><span>₺1.250,00</span>
-                        </p>
-                        <div class="receipt-rule"></div>
-                        <div class="ocr-box low"><span>TOPKDV</span><b>₺113,64</b></div>
-                        <div class="ocr-box"><span>TOPLAM</span><b>₺1.250,00</b></div>
-                        <div class="barcode"></div>
-                      </div>
-                      <div class="scan-line"></div>
-                      <i class="scan-corner tl"></i><i class="scan-corner br"></i>
-                    </div>
-                    <div class="phone-foot">
-                      <span class="status pending"
-                        ><span data-l="tr">KDV alanını kontrol et</span
-                        ><span data-l="en">Check the VAT field</span></span
-                      ><span class="app-action"
-                        ><span data-l="tr">Devam et</span><span data-l="en">Continue</span></span
-                      >
-                    </div>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">grup şirketi</span><span data-l="en">group companies</span>
+                  </dt>
+                  <dd>15+</dd>
                 </div>
-                <div class="scene-footer">
-                  <div>
-                    <div class="scene-steps">
-                      <div class="scene-step is-current" data-step="0">
-                        <span data-l="tr">Backend & React</span
-                        ><span data-l="en">Backend & React</span>
-                      </div>
-                      <div class="scene-step" data-step="1">
-                        <span data-l="tr">Türk fişlerine özel OCR</span
-                        ><span data-l="en">OCR for Turkish receipts</span>
-                      </div>
-                      <div class="scene-step" data-step="2">
-                        <span data-l="tr">Platformun tüm sorumluluğu</span
-                        ><span data-l="en">Full platform ownership</span>
-                      </div>
-                    </div>
-                    <p class="scene-sample">
-                      <span data-l="tr">Ekrandaki veriler örnektir.</span
-                      ><span data-l="en">On-screen data is sample data.</span>
-                    </p>
-                  </div>
-                  <div class="scene-counter">
-                    <span class="phase-number">01</span><span class="scene-meter"><i></i></span
-                    ><span>/ 03</span>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">OCR doğruluğu</span><span data-l="en">OCR accuracy</span>
+                  </dt>
+                  <dd><span data-l="tr">%92</span><span data-l="en">92%</span></dd>
                 </div>
-              </div>
-            </div>
-            <figcaption class="sr-only">
-              <span data-l="tr">Masraf listesi ve OCR alanları işaretlenmiş fiş tarama ekranı.</span
-              ><span data-l="en"
-                >Expense list and receipt scanner with highlighted OCR fields.</span
-              >
-              <span data-l="tr">Temsili görsel, örnek veri.</span
-              ><span data-l="en">Illustrative interface, sample data.</span>
-            </figcaption>
-          </figure>
-          <div class="wrap project-results reveal">
-            <div class="metrics">
-              <div>
-                <strong><span data-l="tr">2.000+</span><span data-l="en">2,000+</span></strong>
-                <p><span data-l="tr">kullanıcı</span><span data-l="en">users</span></p>
-              </div>
-              <div>
-                <strong>15+</strong>
+              </dl>
+              <details>
+                <summary>
+                  <span data-l="tr">Sorumluluğum ve stack</span
+                  ><span data-l="en">My role &amp; stack</span>
+                </summary>
                 <p>
-                  <span data-l="tr">grup şirketi · multi-tenant</span
-                  ><span data-l="en">group companies · multi-tenant</span>
-                </p>
-              </div>
-              <div>
-                <strong><span data-l="tr">%92</span><span data-l="en">92%</span></strong>
-                <p><span data-l="tr">OCR doğruluğu</span><span data-l="en">OCR accuracy</span></p>
-              </div>
-            </div>
-            <div class="project-detail">
-              <span class="detail-label"
-                ><span data-l="tr">Sorumluluğum</span
-                ><span data-l="en">My responsibility</span></span
-              >
-              <div>
-                <span data-l="tr"
-                  >Backend API ve React arayüzünü geliştirdim. Ekip liderinin ayrılmasının ardından
-                  platformun tamamını devralarak geliştirme, entegrasyon ve canlıya alma süreçlerini
-                  yürüttüm.</span
-                ><span data-l="en"
-                  >I developed the backend API and React interface. After the team lead left, I took
-                  ownership of the platform and handled development, integrations, and production
-                  releases.</span
-                >
-                <p class="extra-detail">
                   <span data-l="tr"
-                    >Türk fişleri için yaklaşık 500 farklı fiş düzeniyle özel OCR modeli eğittim ve
-                    eBA onay entegrasyonunu geliştirdim. Üç repo için GitLab CI/CD pipeline’ları
-                    kurdum ve uygulama genelindeki filtrelemeyi yeniden yapılandırdım.</span
+                    >Ekip liderinin ayrılmasının ardından platformun tamamını devralarak geliştirme,
+                    entegrasyon ve canlıya alma süreçlerini yürüttüm. Türk fişleri için yaklaşık 500
+                    farklı fiş düzeniyle özel OCR modeli eğittim ve eBA onay entegrasyonunu
+                    geliştirdim. Üç repo için GitLab CI/CD pipeline’ları kurdum ve uygulama
+                    genelindeki filtrelemeyi yeniden yapılandırdım.</span
                   ><span data-l="en"
-                    >I trained a custom OCR model on around 500 Turkish receipt layouts and
-                    developed the eBA approval integration. I set up GitLab CI/CD pipelines for
-                    three repos and rebuilt filtering across the application.</span
+                    >After the team lead left, I took ownership of the platform and handled
+                    development, integrations, and production releases. I trained a custom OCR model
+                    on around 500 Turkish receipt layouts and developed the eBA approval
+                    integration. I set up GitLab CI/CD pipelines for three repos and rebuilt
+                    filtering across the application.</span
                   >
                 </p>
-              </div>
+                <p class="stack">
+                  .NET 8 · ASP.NET Core Web API · React 19 · TypeScript · Zustand · TanStack Query ·
+                  Vite · MSSQL · Azure Document Intelligence · Logic Apps · Blob Storage · RabbitMQ
+                  · GitLab CI/CD · IIS
+                </p>
+              </details>
             </div>
-            <div class="project-detail">
-              <span class="detail-label">Stack</span>
-              <p class="stack">
-                .NET 8 · ASP.NET Core Web API · React 19 · TypeScript · Zustand · TanStack Query ·
-                Vite · MSSQL · Azure Document Intelligence · Logic Apps · Blob Storage · RabbitMQ ·
-                GitLab CI/CD · IIS
-              </p>
+          </article>
+
+          <!-- SanFlex -->
+          <article class="project" id="sanflex" aria-labelledby="sanflex-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 206 124">
+                <rect x="16" y="12" width="174" height="94" rx="4" class="a-surface" />
+                <path d="M16 27h174M30 40h145" class="a-line" stroke-width="3" />
+                <path d="M30 40h90" class="a-ink" stroke-width="3" />
+                <g class="a-accent-soft a-ink">
+                  <rect x="30" y="53" width="67" height="18" rx="2" />
+                  <rect x="108" y="53" width="67" height="18" rx="2" />
+                  <rect x="30" y="79" width="67" height="18" rx="2" />
+                </g>
+                <rect x="108" y="79" width="67" height="18" rx="2" class="a-soft" />
+                <path d="m82 60 3 3 5-6M160 60l3 3 5-6" fill="none" class="a-ink" />
+              </svg>
+              <span class="project-num">02</span>
             </div>
-          </div>
-        </article>
-        <article class="project scene-sanflex" id="sanflex" aria-labelledby="sanflex-title">
-          <div class="project-heading wrap reveal">
-            <div>
+            <div class="project-body">
               <p class="eyebrow">
                 <span data-l="tr">Sanko Holding · Yan hak dağıtımı</span
-                ><span data-l="en">Sanko Holding · Flexible benefits</span>
+                ><span data-l="en">Sanko Holding · Employee benefits</span>
               </p>
-              <h3 class="project-title" id="sanflex-title">SanFlex</h3>
-              <p class="project-summary">
+              <h3 id="sanflex-title">SanFlex</h3>
+              <p>
                 <span data-l="tr"
                   >İlk canlı projem: çalışanların yan haklarını seçtiği uygulamayı .NET ve React ile
                   baştan sona geliştirdim.</span
@@ -606,237 +528,75 @@
                   .NET and React.</span
                 >
               </p>
-            </div>
-            <span class="project-index">02<br />/ 04</span>
-          </div>
-          <figure class="scene-track" data-scene="sanflex">
-            <div class="scene-sticky" aria-hidden="true">
-              <div class="scene-stage">
-                <div class="scene-meta">
-                  <span class="scene-overline"
-                    ><span data-l="tr">Temsili arayüz</span
-                    ><span data-l="en">Illustrative interface</span></span
-                  ><span>.NET / React</span>
+              <dl class="metrics small">
+                <div>
+                  <dt>
+                    <span data-l="tr">çalışan kullandı</span
+                    ><span data-l="en">employees used it</span>
+                  </dt>
+                  <dd><span data-l="tr">2.000+</span><span data-l="en">2,000+</span></dd>
                 </div>
-                <span class="scene-ghost">SANFLEX</span>
-                <div class="scene-object san-stage">
-                  <div class="browser">
-                    <div class="browser-chrome">
-                      <span class="window-dots"><i></i><i></i><i></i></span
-                      ><span
-                        >sanflex / <span data-l="tr">yan haklar</span
-                        ><span data-l="en">benefits</span></span
-                      ><span class="chrome-end">↗</span>
-                    </div>
-                    <div class="app-body">
-                      <div class="app-heading">
-                        <div>
-                          <span class="eyebrow">SANFLEX</span>
-                          <h4>
-                            <span data-l="tr">Yan haklarım</span
-                            ><span data-l="en">My benefits</span>
-                          </h4>
-                        </div>
-                        <span class="status approved"
-                          ><span data-l="tr">Ramazan 2025</span
-                          ><span data-l="en">Ramadan 2025</span></span
-                        >
-                      </div>
-                      <div class="budget">
-                        <div>
-                          <span
-                            ><span data-l="tr">Bütçen</span
-                            ><span data-l="en">Your budget</span></span
-                          ><b>₺5.000</b>
-                        </div>
-                        <div class="budget-track"><span></span></div>
-                        <div class="budget-labels">
-                          <span
-                            ><span data-l="tr">Seçilen: ₺3.000</span
-                            ><span data-l="en">Selected: ₺3,000</span></span
-                          ><span
-                            ><span data-l="tr">Kalan: ₺2.000</span
-                            ><span data-l="en">Remaining: ₺2,000</span></span
-                          >
-                        </div>
-                      </div>
-                      <div class="benefit-grid">
-                        <div class="benefit selected">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <path d="M5 8h22l-2 13H8L5 4H2M10 27h.1M24 27h.1" /></svg
-                          ><span class="check">✓</span
-                          ><b
-                            ><span data-l="tr">Market çeki</span
-                            ><span data-l="en">Grocery voucher</span></b
-                          ><span>₺1.500</span>
-                        </div>
-                        <div class="benefit">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <path
-                              d="m4 9 12-6 12 6v15l-12 6-12-6ZM4 9l12 6 12-6M16 15v15M10 6l12 6"
-                            /></svg
-                          ><span class="check">+</span
-                          ><b
-                            ><span data-l="tr">Ramazan kolisi</span
-                            ><span data-l="en">Ramadan food box</span></b
-                          ><span>₺1.000</span>
-                        </div>
-                        <div class="benefit selected">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <rect x="3" y="7" width="26" height="19" rx="3" />
-                            <path d="M3 13h26M8 21h6" /></svg
-                          ><span class="check">✓</span
-                          ><b
-                            ><span data-l="tr">Yemek kartı</span
-                            ><span data-l="en">Meal card</span></b
-                          ><span>₺1.500</span>
-                        </div>
-                        <div class="benefit">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <path
-                              d="M5 28V6h14v22M3 28h19M8 10h8v7H8ZM19 13h4v9q0 4 4 4V10l-4-5"
-                            /></svg
-                          ><span class="check">+</span
-                          ><b
-                            ><span data-l="tr">Akaryakıt</span
-                            ><span data-l="en">Fuel allowance</span></b
-                          ><span>₺1.000</span>
-                        </div>
-                      </div>
-                      <div class="benefit-bottom">
-                        <span class="save-toast"
-                          >✓ <span data-l="tr">Seçiminiz kaydedildi</span
-                          ><span data-l="en">Your selection is saved</span></span
-                        ><span class="app-action"
-                          ><span data-l="tr">Seçimi onayla</span
-                          ><span data-l="en">Confirm selection</span></span
-                        >
-                      </div>
-                      <div class="app-foot">
-                        <span data-l="tr">Örnek seçenekler ve tutarlar</span
-                        ><span data-l="en">Sample benefits and amounts</span>
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">test kapsamı</span><span data-l="en">test coverage</span>
+                  </dt>
+                  <dd><span data-l="tr">%90+</span><span data-l="en">90%+</span></dd>
                 </div>
-                <div class="scene-footer">
-                  <div>
-                    <div class="scene-steps">
-                      <div class="scene-step is-current" data-step="0">
-                        <span data-l="tr">Baştan sona geliştirme</span
-                        ><span data-l="en">End-to-end development</span>
-                      </div>
-                      <div class="scene-step" data-step="1">
-                        <span data-l="tr">.NET & React</span><span data-l="en">.NET & React</span>
-                      </div>
-                      <div class="scene-step" data-step="2">
-                        <span data-l="tr">Ramazan 2025’te canlıya çıktı</span
-                        ><span data-l="en">Launched in Ramadan 2025</span>
-                      </div>
-                    </div>
-                    <p class="scene-sample">
-                      <span data-l="tr">Ekrandaki veriler örnektir.</span
-                      ><span data-l="en">On-screen data is sample data.</span>
-                    </p>
-                  </div>
-                  <div class="scene-counter">
-                    <span class="phase-number">01</span><span class="scene-meter"><i></i></span
-                    ><span>/ 03</span>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">ilk canlı proje</span><span data-l="en">first launch</span>
+                  </dt>
+                  <dd>0 → 1</dd>
                 </div>
-              </div>
-            </div>
-            <figcaption class="sr-only">
-              <span data-l="tr">Bütçe çubuğu ve seçilmiş yan hak seçenekleri.</span
-              ><span data-l="en">Budget bar and selected employee benefits.</span>
-              <span data-l="tr">Temsili görsel, örnek veri.</span
-              ><span data-l="en">Illustrative interface, sample data.</span>
-            </figcaption>
-          </figure>
-          <div class="wrap project-results reveal">
-            <div class="metrics">
-              <div>
-                <strong><span data-l="tr">2.000+</span><span data-l="en">2,000+</span></strong>
+              </dl>
+              <details>
+                <summary>
+                  <span data-l="tr">Sorumluluğum ve stack</span
+                  ><span data-l="en">My role &amp; stack</span>
+                </summary>
                 <p>
-                  <span data-l="tr">çalışan kullandı</span
-                  ><span data-l="en">employees used it</span>
-                </p>
-              </div>
-              <div>
-                <strong><span data-l="tr">%90+</span><span data-l="en">90%+</span></strong>
-                <p><span data-l="tr">test kapsamı</span><span data-l="en">test coverage</span></p>
-              </div>
-              <div>
-                <strong>0 → 1</strong>
-                <p>
-                  <span data-l="tr">ilk canlı projem</span
-                  ><span data-l="en">my first production project</span>
-                </p>
-              </div>
-            </div>
-            <div class="project-detail">
-              <span class="detail-label"
-                ><span data-l="tr">Sorumluluğum</span
-                ><span data-l="en">My responsibility</span></span
-              >
-              <div>
-                <span data-l="tr"
-                  >Backend’den arayüze kadar uygulamayı geliştirdim ve Ramazan 2025’te canlıya
-                  aldım. Çalışanların kendi bütçeleri içinde istedikleri yan hakları seçebildiği bu
-                  ürün, holding genelinde kullanıldı.</span
-                ><span data-l="en"
-                  >I built the application from backend to interface and launched it in Ramadan
-                  2025. It let employees choose benefits within their own budgets and was used
-                  across the holding.</span
-                >
-                <p class="extra-detail">
                   <span data-l="tr"
-                    >Bu proje, bir ürünü ilk kez sıfırdan gerçek kullanıcılarla buluşturduğum
-                    çalışma oldu.</span
+                    >Backend’den arayüze kadar uygulamayı geliştirdim ve Ramazan 2025’te canlıya
+                    aldım. Çalışanların kendi bütçeleri içinde istedikleri yan hakları seçebildiği
+                    bu ürün, holding genelinde kullanıldı. Bir ürünü ilk kez sıfırdan gerçek
+                    kullanıcılarla buluşturduğum çalışma oldu.</span
                   ><span data-l="en"
-                    >This was the first product I built from scratch and put into the hands of real
-                    users.</span
+                    >I built the application from backend to interface and launched it in Ramadan
+                    2025. It let employees choose benefits within their own budgets and was used
+                    across the holding. It was the first product I built from scratch and put into
+                    the hands of real users.</span
                   >
                 </p>
-              </div>
+                <p class="stack">.NET · React 18 · Context API · MSSQL</p>
+              </details>
             </div>
-            <div class="project-detail">
-              <span class="detail-label">Stack</span>
-              <p class="stack">.NET · React 18 · Context API · MSSQL</p>
+          </article>
+
+          <!-- RPA -->
+          <article class="project" id="rpa" aria-labelledby="rpa-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 206 124">
+                <g class="a-surface">
+                  <rect x="8" y="46" width="40" height="32" />
+                  <rect x="158" y="46" width="40" height="32" />
+                </g>
+                <path d="M48 62h27M132 62h26" class="a-ink" />
+                <rect x="78" y="34" width="51" height="52" rx="8" class="a-accent-soft a-ink" />
+                <path d="M104 34V23M95 23h18M94 73h20" class="a-ink" />
+                <circle cx="93" cy="55" r="3" class="a-dot" />
+                <circle cx="115" cy="55" r="3" class="a-dot" />
+              </svg>
+              <span class="project-num">03</span>
             </div>
-          </div>
-        </article>
-        <article class="project scene-rpa" id="rpa" aria-labelledby="rpa-title">
-          <div class="project-heading wrap reveal">
-            <div>
+            <div class="project-body">
               <p class="eyebrow">
                 <span data-l="tr">Sanshine · Süreç otomasyonu</span
                 ><span data-l="en">Sanshine · Process automation</span>
               </p>
-              <h3 class="project-title" id="rpa-title">
+              <h3 id="rpa-title">
                 <span data-l="tr">RPA robotları</span><span data-l="en">RPA robots</span>
               </h3>
-              <p class="project-summary">
+              <p>
                 <span data-l="tr"
                   >İmza, mesai mutabakatı, ihracat ve VGM süreçleri için canlıda çalışan dört robot
                   tasarlayıp geliştirdim.</span
@@ -845,274 +605,79 @@
                   reconciliation, exports, and VGM declarations.</span
                 >
               </p>
-            </div>
-            <span class="project-index">03<br />/ 04</span>
-          </div>
-          <figure class="scene-track" data-scene="rpa">
-            <div class="scene-sticky" aria-hidden="true">
-              <div class="scene-stage">
-                <div class="scene-meta">
-                  <span class="scene-overline"
-                    ><span data-l="tr">Temsili arayüz</span
-                    ><span data-l="en">Illustrative interface</span></span
-                  ><span>Power Automate / PowerShell</span>
+              <dl class="metrics small">
+                <div>
+                  <dt>
+                    <span data-l="tr">robot canlıda</span><span data-l="en">robots live</span>
+                  </dt>
+                  <dd>4</dd>
                 </div>
-                <span class="scene-ghost">RPA</span>
-                <div class="scene-object rpa-stage">
-                  <div class="robot-board">
-                    <div class="robot-row">
-                      <div class="robot-name">
-                        <span class="robot-number">01</span>
-                        <div>
-                          <h4>
-                            <span data-l="tr">Zimmet formları</span
-                            ><span data-l="en">Asset assignment forms</span>
-                          </h4>
-                          <small
-                            ><span data-l="tr">5 form tipi</span
-                            ><span data-l="en">5 form types</span></small
-                          >
-                        </div>
-                        <span class="status approved"
-                          ><span data-l="tr">Canlı</span><span data-l="en">Live</span></span
-                        >
-                      </div>
-                      <div class="robot-flow">
-                        <span><span data-l="tr">Talep</span><span data-l="en">Request</span></span
-                        ><i class="flow-line"></i
-                        ><span class="robot-core"
-                          ><svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <rect x="5" y="9" width="22" height="18" rx="4" />
-                            <path d="M16 9V4M12 4h8M2 15v7M30 15v7M11 21h10" />
-                            <circle cx="11" cy="15" r="1" />
-                            <circle cx="21" cy="15" r="1" /></svg></span
-                        ><i class="flow-line"></i
-                        ><span
-                          ><span data-l="tr">İmzalı PDF</span
-                          ><span data-l="en">Signed PDF</span></span
-                        >
-                      </div>
-                    </div>
-                    <div class="robot-row">
-                      <div class="robot-name">
-                        <span class="robot-number">02</span>
-                        <div>
-                          <h4>
-                            <span data-l="tr">Mesai mutabakatı</span
-                            ><span data-l="en">Overtime reconciliation</span>
-                          </h4>
-                          <small
-                            ><span data-l="tr">PowerShell</span
-                            ><span data-l="en">PowerShell</span></small
-                          >
-                        </div>
-                        <span class="status approved"
-                          ><span data-l="tr">Canlı</span><span data-l="en">Live</span></span
-                        >
-                      </div>
-                      <div class="robot-flow">
-                        <span><span data-l="tr">Excel</span><span data-l="en">Excel</span></span
-                        ><i class="flow-line"></i
-                        ><span class="robot-core"
-                          ><svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <rect x="5" y="9" width="22" height="18" rx="4" />
-                            <path d="M16 9V4M12 4h8M2 15v7M30 15v7M11 21h10" />
-                            <circle cx="11" cy="15" r="1" />
-                            <circle cx="21" cy="15" r="1" /></svg></span
-                        ><i class="flow-line"></i
-                        ><span
-                          ><span data-l="tr">İmza + takip</span
-                          ><span data-l="en">Sign + track</span></span
-                        >
-                      </div>
-                    </div>
-                    <div class="robot-row">
-                      <div class="robot-name">
-                        <span class="robot-number">03</span>
-                        <div>
-                          <h4>
-                            <span data-l="tr">İhracat dosyası kapatma</span
-                            ><span data-l="en">Export file closure</span>
-                          </h4>
-                          <small
-                            ><span data-l="tr">Dosya kapatma</span
-                            ><span data-l="en">File closure</span></small
-                          >
-                        </div>
-                        <span class="status approved"
-                          ><span data-l="tr">Canlı</span><span data-l="en">Live</span></span
-                        >
-                      </div>
-                      <div class="robot-flow">
-                        <span><span data-l="tr">E-posta</span><span data-l="en">Email</span></span
-                        ><i class="flow-line"></i
-                        ><span class="robot-core"
-                          ><svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <rect x="5" y="9" width="22" height="18" rx="4" />
-                            <path d="M16 9V4M12 4h8M2 15v7M30 15v7M11 21h10" />
-                            <circle cx="11" cy="15" r="1" />
-                            <circle cx="21" cy="15" r="1" /></svg></span
-                        ><i class="flow-line"></i
-                        ><span><span data-l="tr">Netsis</span><span data-l="en">Netsis</span></span>
-                      </div>
-                    </div>
-                    <div class="robot-row">
-                      <div class="robot-name">
-                        <span class="robot-number">04</span>
-                        <div>
-                          <h4>
-                            <span data-l="tr">VGM beyanı</span
-                            ><span data-l="en">VGM declaration</span>
-                          </h4>
-                          <small
-                            ><span data-l="tr">Doğrulanmış brüt ağırlık</span
-                            ><span data-l="en">Verified gross mass</span></small
-                          >
-                        </div>
-                        <span class="status approved"
-                          ><span data-l="tr">Canlı</span><span data-l="en">Live</span></span
-                        >
-                      </div>
-                      <div class="robot-flow">
-                        <span
-                          ><span data-l="tr">Ağırlık bilgisi</span
-                          ><span data-l="en">Weight data</span></span
-                        ><i class="flow-line"></i
-                        ><span class="robot-core"
-                          ><svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                          >
-                            <rect x="5" y="9" width="22" height="18" rx="4" />
-                            <path d="M16 9V4M12 4h8M2 15v7M30 15v7M11 21h10" />
-                            <circle cx="11" cy="15" r="1" />
-                            <circle cx="21" cy="15" r="1" /></svg></span
-                        ><i class="flow-line"></i
-                        ><span
-                          ><span data-l="tr">Armatör portalı</span
-                          ><span data-l="en">Carrier portal</span></span
-                        >
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">belge / ay</span><span data-l="en">documents / month</span>
+                  </dt>
+                  <dd>100–500</dd>
                 </div>
-                <div class="scene-footer">
-                  <div>
-                    <div class="scene-steps">
-                      <div class="scene-step is-current" data-step="0">
-                        <span data-l="tr">Dört süreç, dört canlı robot</span
-                        ><span data-l="en">Four processes, four live robots</span>
-                      </div>
-                      <div class="scene-step" data-step="1">
-                        <span data-l="tr">İmza süreçlerinde REST API</span
-                        ><span data-l="en">REST APIs for signatures</span>
-                      </div>
-                      <div class="scene-step" data-step="2">
-                        <span data-l="tr">Power Automate → PowerShell</span
-                        ><span data-l="en">Power Automate → PowerShell</span>
-                      </div>
-                    </div>
-                    <p class="scene-sample">
-                      <span data-l="tr">Ekrandaki veriler örnektir.</span
-                      ><span data-l="en">On-screen data is sample data.</span>
-                    </p>
-                  </div>
-                  <div class="scene-counter">
-                    <span class="phase-number">01</span><span class="scene-meter"><i></i></span
-                    ><span>/ 03</span>
-                  </div>
+                <div>
+                  <dt>
+                    <span data-l="tr">saat / ay tasarruf</span
+                    ><span data-l="en">hours / month saved</span>
+                  </dt>
+                  <dd>10–40</dd>
                 </div>
-              </div>
-            </div>
-            <figcaption class="sr-only">
-              <span data-l="tr">Dört canlı robotun girdi, işlem ve çıktı akışları.</span
-              ><span data-l="en">Input, processing, and output flows of four live robots.</span>
-              <span data-l="tr">Temsili görsel, örnek veri.</span
-              ><span data-l="en">Illustrative interface, sample data.</span>
-            </figcaption>
-          </figure>
-          <div class="wrap project-results reveal">
-            <div class="metrics">
-              <div>
-                <strong>4</strong>
+              </dl>
+              <details>
+                <summary>
+                  <span data-l="tr">Sorumluluğum ve stack</span
+                  ><span data-l="en">My role &amp; stack</span>
+                </summary>
                 <p>
-                  <span data-l="tr">robot canlıda</span
-                  ><span data-l="en">robots in production</span>
-                </p>
-              </div>
-              <div>
-                <strong>100–500</strong>
-                <p><span data-l="tr">belge / ay</span><span data-l="en">documents / month</span></p>
-              </div>
-              <div>
-                <strong>10–40</strong>
-                <p>
-                  <span data-l="tr">saat / ay elle iş tasarrufu</span
-                  ><span data-l="en">hours of manual work saved / month</span>
-                </p>
-              </div>
-            </div>
-            <div class="project-detail">
-              <span class="detail-label"
-                ><span data-l="tr">Sorumluluğum</span
-                ><span data-l="en">My responsibility</span></span
-              >
-              <div>
-                <span data-l="tr"
-                  >Dört robotun tasarımını ve geliştirmesini üstlendim. İmza süreçlerini e-imza REST
-                  API üzerinden kurarak ekran otomasyonunun kırılganlığını azalttım.</span
-                ><span data-l="en"
-                  >I owned the design and development of all four robots. I built signature flows
-                  around the e-signature REST API to reduce reliance on fragile screen
-                  automation.</span
-                >
-                <p class="extra-detail">
                   <span data-l="tr"
-                    >Mesai mutabakatını Power Automate’ten PowerShell’e taşıyarak bu bağımlılığı
-                    kaldırdım. Diğer robotlar e-postayla tetiklenen Netsis işlemlerini ve armatör
+                    >Dört robotun tasarımını ve geliştirmesini üstlendim. İmza süreçlerini e-imza
+                    REST API üzerinden kurarak ekran otomasyonunun kırılganlığını azalttım. Mesai
+                    mutabakatını Power Automate’ten PowerShell’e taşıyarak bu bağımlılığı kaldırdım.
+                    Diğer robotlar e-postayla tetiklenen Netsis işlemlerini ve armatör
                     portallarındaki VGM beyanlarını yürütüyor.</span
                   ><span data-l="en"
-                    >I moved overtime reconciliation from Power Automate to PowerShell to remove
+                    >I owned the design and development of all four robots. I built signature flows
+                    around the e-signature REST API to reduce reliance on fragile screen automation,
+                    and moved overtime reconciliation from Power Automate to PowerShell to remove
                     that dependency. The other robots handle email-triggered Netsis operations and
                     VGM declarations in carrier portals.</span
                   >
                 </p>
-              </div>
+                <p class="stack">
+                  Power Automate Desktop + Cloud · PowerShell · REST API · ServiceDesk Plus · Netsis
+                </p>
+              </details>
             </div>
-            <div class="project-detail">
-              <span class="detail-label">Stack</span>
-              <p class="stack">
-                Power Automate Desktop + Cloud · PowerShell · REST API · ServiceDesk Plus · Netsis
-              </p>
+          </article>
+
+          <!-- BiIK -->
+          <article class="project" id="biik" aria-labelledby="biik-title">
+            <div class="project-art" aria-hidden="true">
+              <svg viewBox="0 0 206 124">
+                <g class="a-ink" opacity=".45">
+                  <path d="M103 62 48 20M103 62 166 28M103 62 161 104M103 62 37 98" />
+                </g>
+                <circle cx="103" cy="62" r="23" class="a-accent-soft a-ink" />
+                <g class="a-surface a-ink">
+                  <circle cx="48" cy="20" r="10" />
+                  <circle cx="166" cy="28" r="13" />
+                  <circle cx="161" cy="104" r="10" />
+                  <circle cx="37" cy="98" r="13" />
+                </g>
+                <path d="M95 62h16M103 54v16" class="a-ink" />
+              </svg>
+              <span class="project-num">04</span>
             </div>
-          </div>
-        </article>
-        <article class="project scene-biik" id="biik" aria-labelledby="biik-title">
-          <div class="project-heading wrap reveal">
-            <div>
+            <div class="project-body">
               <p class="eyebrow">
                 <span data-l="tr">MEF Üniversitesi · Bitirme projesi</span
                 ><span data-l="en">MEF University · Graduation project</span>
               </p>
-              <h3 class="project-title" id="biik-title">BiIK</h3>
-              <p class="project-summary">
+              <h3 id="biik-title">BiIK</h3>
+              <p>
                 <span data-l="tr"
                   >Doğal dille aday arayan sistemin GraphRAG arama motorunu ve FastAPI backend’ini
                   geliştirdim.</span
@@ -1121,325 +686,129 @@
                   candidate search system.</span
                 >
               </p>
-            </div>
-            <span class="project-index">04<br />/ 04</span>
-          </div>
-          <figure class="scene-track" data-scene="biik">
-            <div class="scene-sticky" aria-hidden="true">
-              <div class="scene-stage">
-                <div class="scene-meta">
-                  <span class="scene-overline"
-                    ><span data-l="tr">Temsili arayüz</span
-                    ><span data-l="en">Illustrative interface</span></span
-                  ><span>GraphRAG / FastAPI</span>
+              <dl class="metrics small">
+                <div>
+                  <dt>
+                    <span data-l="tr">aday verisiyle test</span
+                    ><span data-l="en">candidates tested</span>
+                  </dt>
+                  <dd><span data-l="tr">1.000+</span><span data-l="en">1,000+</span></dd>
                 </div>
-                <span class="scene-ghost">GRAPHRAG</span>
-                <div class="scene-object biik-stage">
-                  <div class="browser">
-                    <div class="browser-chrome">
-                      <span class="window-dots"><i></i><i></i><i></i></span
-                      ><span
-                        >biik / <span data-l="tr">aday arama</span
-                        ><span data-l="en">candidate search</span></span
-                      ><span class="chrome-end">↗</span>
-                    </div>
-                    <div class="app-body">
-                      <div class="app-heading">
-                        <div>
-                          <span class="eyebrow">BİIK · GRAPHRAG</span>
-                          <h4>
-                            <span data-l="tr">Doğru adayı, nedenleriyle bul.</span
-                            ><span data-l="en">Find the right candidate. Know why.</span>
-                          </h4>
-                        </div>
-                      </div>
-                      <div class="search-mock">
-                        <svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                        >
-                          <circle cx="10" cy="10" r="6" />
-                          <path d="m15 15 6 6" /></svg
-                        ><span
-                          ><span data-l="tr">3 yıl .NET deneyimli, Azure bilen backend adayı</span
-                          ><span data-l="en"
-                            >Backend candidate with 3 years of .NET and Azure</span
-                          ></span
-                        ><i class="caret"></i>
-                      </div>
-                      <div class="biik-results">
-                        <div class="graph-panel">
-                          <svg class="knowledge-graph" viewBox="0 0 500 280">
-                            <g class="graph-lines">
-                              <path
-                                d="M250 140 90 55M250 140 420 65M250 140 400 225M250 140 80 225M250 140 250 30"
-                              />
-                            </g>
-                            <circle class="graph-halo" cx="250" cy="140" r="61" />
-                            <circle class="graph-center" cx="250" cy="140" r="43" />
-                            <text class="graph-center-label" x="250" y="145" text-anchor="middle">
-                              <tspan data-l="tr">Aday</tspan>
-                              <tspan data-l="en">Candidate</tspan>
-                            </text>
-                            <g class="graph-node">
-                              <circle cx="90" cy="55" r="25" />
-                              <text x="90" y="60" text-anchor="middle">.NET</text>
-                              <circle cx="420" cy="65" r="27" />
-                              <text x="420" y="70" text-anchor="middle">Azure</text>
-                              <circle cx="400" cy="225" r="30" />
-                              <text x="400" y="230" text-anchor="middle">Backend</text>
-                              <circle cx="80" cy="225" r="30" />
-                              <text x="80" y="230" text-anchor="middle">
-                                <tspan data-l="tr">3 yıl</tspan>
-                                <tspan data-l="en">3 yrs</tspan>
-                              </text>
-                              <circle cx="250" cy="30" r="24" />
-                              <text x="250" y="35" text-anchor="middle">C#</text>
-                            </g></svg
-                          ><span class="graph-caption"
-                            ><span data-l="tr">Soru → bilgi grafiği → gerekçeli sonuç</span
-                            ><span data-l="en"
-                              >Question → knowledge graph → explained result</span
-                            ></span
-                          >
-                        </div>
-                        <div class="candidate-list">
-                          <div class="list-label">
-                            <span data-l="tr">Örnek eşleşmeler</span
-                            ><span data-l="en">Sample matches</span>
-                          </div>
-                          <div class="candidate">
-                            <span class="avatar">01</span>
-                            <div>
-                              <b
-                                ><span data-l="tr">Örnek aday</span
-                                ><span data-l="en">Sample candidate</span> 01</b
-                              ><small>.NET · Azure · C#</small>
-                              <div class="match-track"><i style="width: 96%"></i></div>
-                            </div>
-                            <strong
-                              ><span data-l="tr">%96</span><span data-l="en">96%</span></strong
-                            >
-                          </div>
-                          <div class="candidate">
-                            <span class="avatar">02</span>
-                            <div>
-                              <b
-                                ><span data-l="tr">Örnek aday</span
-                                ><span data-l="en">Sample candidate</span> 02</b
-                              ><small>.NET · Azure</small>
-                              <div class="match-track"><i style="width: 89%"></i></div>
-                            </div>
-                            <strong
-                              ><span data-l="tr">%89</span><span data-l="en">89%</span></strong
-                            >
-                          </div>
-                          <div class="candidate">
-                            <span class="avatar">03</span>
-                            <div>
-                              <b
-                                ><span data-l="tr">Örnek aday</span
-                                ><span data-l="en">Sample candidate</span> 03</b
-                              ><small>.NET · Backend</small>
-                              <div class="match-track"><i style="width: 82%"></i></div>
-                            </div>
-                            <strong
-                              ><span data-l="tr">%82</span><span data-l="en">82%</span></strong
-                            >
-                          </div>
-                          <p class="candidate-note">
-                            <span data-l="tr">Sıralama ve yüzdeler örnek veridir.</span
-                            ><span data-l="en">Rankings and percentages are sample data.</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div>
+                  <dt><span data-l="tr">destekli</span><span data-l="en">supported</span></dt>
+                  <dd>TÜBİTAK</dd>
                 </div>
-                <div class="scene-footer">
-                  <div>
-                    <div class="scene-steps">
-                      <div class="scene-step is-current" data-step="0">
-                        <span data-l="tr">Doğal dilde arama</span
-                        ><span data-l="en">Natural-language search</span>
-                      </div>
-                      <div class="scene-step" data-step="1">
-                        <span data-l="tr">GraphRAG & embedding</span
-                        ><span data-l="en">GraphRAG & embeddings</span>
-                      </div>
-                      <div class="scene-step" data-step="2">
-                        <span data-l="tr">FastAPI backend</span
-                        ><span data-l="en">FastAPI backend</span>
-                      </div>
-                    </div>
-                    <p class="scene-sample">
-                      <span data-l="tr">Ekrandaki veriler örnektir.</span
-                      ><span data-l="en">On-screen data is sample data.</span>
-                    </p>
-                  </div>
-                  <div class="scene-counter">
-                    <span class="phase-number">01</span><span class="scene-meter"><i></i></span
-                    ><span>/ 03</span>
-                  </div>
+                <div>
+                  <dt><span data-l="tr">kişilik ekip</span><span data-l="en">person team</span></dt>
+                  <dd>2</dd>
                 </div>
-              </div>
-            </div>
-            <figcaption class="sr-only">
-              <span data-l="tr">Aday arama kutusu, beceri grafiği ve örnek eşleşme sıralaması.</span
-              ><span data-l="en"
-                >Candidate search box, skill graph, and sample match rankings.</span
-              >
-              <span data-l="tr">Temsili görsel, örnek veri.</span
-              ><span data-l="en">Illustrative interface, sample data.</span>
-            </figcaption>
-          </figure>
-          <div class="wrap project-results reveal">
-            <div class="metrics">
-              <div>
-                <strong><span data-l="tr">1.000+</span><span data-l="en">1,000+</span></strong>
+              </dl>
+              <details>
+                <summary>
+                  <span data-l="tr">Sorumluluğum ve stack</span
+                  ><span data-l="en">My role &amp; stack</span>
+                </summary>
                 <p>
-                  <span data-l="tr">aday verisiyle test edildi</span
-                  ><span data-l="en">candidate records tested</span>
-                </p>
-              </div>
-              <div>
-                <strong class="long-metric">TÜBİTAK</strong>
-                <p>
-                  <span data-l="tr">destekli bitirme projesi</span
-                  ><span data-l="en">supported graduation project</span>
-                </p>
-              </div>
-              <div>
-                <strong>2</strong>
-                <p><span data-l="tr">kişilik ekip</span><span data-l="en">person team</span></p>
-              </div>
-            </div>
-            <div class="project-detail">
-              <span class="detail-label"
-                ><span data-l="tr">Sorumluluğum</span
-                ><span data-l="en">My responsibility</span></span
-              >
-              <div>
-                <span data-l="tr"
-                  >İki kişilik bitirme projesi ekibinde arama motorundan ve backend’den sorumluydum.
-                  Bilgi grafiği, LLM ve embedding bileşenlerini aday arama akışında bir araya
-                  getirdim.</span
-                ><span data-l="en"
-                  >In our two-person graduation project team, I was responsible for the search
-                  engine and backend. I brought together the knowledge graph, LLM, and embedding
-                  components in the candidate search flow.</span
-                >
-                <p class="extra-detail">
                   <span data-l="tr"
-                    >TÜBİTAK destekli projeyi 1.000’den fazla aday verisiyle test ettik. Sistem,
+                    >İki kişilik ekipte arama motorundan ve backend’den sorumluydum. Bilgi grafiği,
+                    LLM ve embedding bileşenlerini aday arama akışında bir araya getirdim. Sistem,
                     doğal dildeki sorulara göre adayları eşleşme gerekçeleriyle sıralıyor.</span
                   ><span data-l="en"
-                    >We tested the TÜBİTAK-supported project with more than 1,000 candidate records.
-                    The system ranks candidates from natural-language queries and explains the
-                    matches.</span
+                    >In our two-person team, I was responsible for the search engine and backend. I
+                    brought together the knowledge graph, LLM, and embedding components in the
+                    candidate search flow. The system ranks candidates from natural-language queries
+                    and explains the matches.</span
                   >
                 </p>
-              </div>
+                <p class="stack">Python · FastAPI · React · Memgraph · OpenAI embeddings · Groq</p>
+              </details>
             </div>
-            <div class="project-detail">
-              <span class="detail-label">Stack</span>
-              <p class="stack">Python · FastAPI · React · Memgraph · OpenAI embeddings · Groq</p>
-            </div>
-          </div>
-        </article>
-        <p class="representation-note wrap">
+          </article>
+        </div>
+        <p class="wrap note">
           <span data-l="tr"
-            >Görseller temsilidir, ekrandaki veriler örnektir. Proje rakamları gerçek kullanım ve
+            >Kurumsal projelerin görselleri temsilidir. Proje rakamları gerçek kullanım ve
             çalışmalara aittir.</span
           ><span data-l="en"
-            >Interfaces are illustrative; on-screen data is sample data. Project metrics reflect
-            actual usage and work.</span
+            >Visuals for enterprise projects are illustrative. Project metrics reflect actual usage
+            and work.</span
           >
         </p>
       </section>
-      <section id="experience" class="wrap experience" aria-labelledby="experience-title">
-        <div class="section-heading reveal">
-          <p class="section-kicker">
-            <span data-l="tr">Deneyim</span><span data-l="en">Experience</span>
-          </p>
+
+      <!-- Experience -->
+      <section id="experience" class="wrap split" aria-labelledby="experience-title">
+        <div class="section-head sticky">
+          <p class="kicker"><span data-l="tr">Deneyim</span><span data-l="en">Experience</span></p>
           <h2 id="experience-title">
-            <span data-l="tr">Okuldan<br />üretime.</span
-            ><span data-l="en">From study<br />to production.</span>
+            <span data-l="tr">Okuldan üretime.</span
+            ><span data-l="en">From study to production.</span>
           </h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-axis" aria-hidden="true"></div>
-          <div class="timeline-plot">
-            <div class="timeline-grid" aria-hidden="true"></div>
-            <div class="timeline-row">
-              <div class="timeline-label">
-                <span data-l="tr">Vefa Lisesi</span><span data-l="en">Vefa High School</span>
-                <small>2016 — 2021</small>
-              </div>
-              <div class="timeline-bar hs-bar">
-                <span data-l="tr">Lise eğitimi</span><span data-l="en">High school</span>
-              </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-label">
-                <span data-l="tr">MEF Üniversitesi · Bilgisayar Mühendisliği</span
-                ><span data-l="en">MEF University · Computer Engineering</span>
-                <small
-                  >2022 — 2026 · <span data-l="tr">Mezun</span
-                  ><span data-l="en">Graduated</span></small
-                ><small class="timeline-subnote"
-                  ><span data-l="tr">Bitirme: BiIK (TÜBİTAK destekli)</span
-                  ><span data-l="en">Graduation: BiIK (TÜBİTAK supported)</span></small
-                >
-              </div>
-              <div class="timeline-bar edu-bar">
-                <span class="bar-long"
-                  ><span data-l="tr">Bitirme: BiIK (TÜBİTAK destekli)</span
-                  ><span data-l="en">Graduation: BiIK (TÜBİTAK supported)</span></span
-                ><span class="bar-short">BiIK</span>
-              </div>
-            </div>
-            <div class="timeline-row">
-              <div class="timeline-label">
-                Junior Software Developer · Sanko Holding
-                <small
-                  ><span data-l="tr">Mayıs 2024 — bugün</span
-                  ><span data-l="en">May 2024 — present</span> ·
-                  <span id="work-duration"></span></small
-                ><small class="timeline-subnote">Cüzdan · SanFlex · RPA</small>
-              </div>
-              <div class="timeline-bar work-bar">
-                <span class="bar-long">Cüzdan · SanFlex · RPA</span
-                ><span class="bar-short"
-                  ><span data-l="tr">Çalışma</span><span data-l="en">Work</span></span
-                >
-              </div>
-            </div>
-            <div class="timeline-today" aria-hidden="true">
-              <span><span data-l="tr">bugün</span><span data-l="en">today</span></span>
-            </div>
-          </div>
-        </div>
-        <p class="timeline-note">
-          <span data-l="tr">Üniversitenin son iki yılını tam zamanlı çalışarak tamamladım.</span
-          ><span data-l="en"
-            >I completed the last two years of university while working full time.</span
-          >
-        </p>
-      </section>
-      <section id="about" class="wrap about" aria-labelledby="about-title">
-        <div class="section-heading reveal">
-          <p class="section-kicker">
-            <span data-l="tr">Hakkımda</span><span data-l="en">About</span>
+          <p class="section-lead">
+            <span data-l="tr">Üniversitenin son iki yılını tam zamanlı çalışarak tamamladım.</span
+            ><span data-l="en"
+              >I completed the last two years of university while working full time.</span
+            >
           </p>
-          <h2 id="about-title">
-            <span data-l="tr">Nasıl<br />çalışıyorum.</span
-            ><span data-l="en">How<br />I work.</span>
-          </h2>
         </div>
-        <div class="about-grid reveal">
+        <ol class="timeline">
+          <li class="current">
+            <span class="when"
+              ><span data-l="tr">Mayıs 2024 — bugün</span
+              ><span data-l="en">May 2024 — present</span> · <span id="work-duration"></span
+            ></span>
+            <h3>Junior Software Developer</h3>
+            <p class="where">Sanko Holding</p>
+            <p>
+              <span data-l="tr"
+                >Cüzdan ve SanFlex’i geliştirdim, Sanshine için dört RPA robotu kurdum; eBA BPM
+                akışları ve entegrasyonlar üzerinde çalışıyorum.</span
+              ><span data-l="en"
+                >Built Cüzdan and SanFlex, delivered four RPA robots for Sanshine, and work on eBA
+                BPM flows and integrations.</span
+              >
+            </p>
+            <p class="tags">Cüzdan · SanFlex · RPA · eBA BPM</p>
+          </li>
+          <li>
+            <span class="when"
+              >2022 — 2026 · <span data-l="tr">Mezun</span><span data-l="en">Graduated</span></span
+            >
+            <h3>
+              <span data-l="tr">Bilgisayar Mühendisliği</span
+              ><span data-l="en">Computer Engineering</span>
+            </h3>
+            <p class="where">
+              <span data-l="tr">MEF Üniversitesi</span><span data-l="en">MEF University</span>
+            </p>
+            <p>
+              <span data-l="tr"
+                >Bitirme projesi BiIK: TÜBİTAK destekli, GraphRAG tabanlı aday arama sistemi.</span
+              ><span data-l="en"
+                >Graduation project BiIK: a TÜBİTAK-supported, GraphRAG-based candidate search
+                system.</span
+              >
+            </p>
+          </li>
+          <li>
+            <span class="when">2016 — 2021</span>
+            <h3><span data-l="tr">Lise</span><span data-l="en">High school</span></h3>
+            <p class="where">
+              <span data-l="tr">Vefa Lisesi</span><span data-l="en">Vefa High School</span>
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about" aria-labelledby="about-title">
+        <div class="wrap split">
+          <div class="section-head">
+            <p class="kicker"><span data-l="tr">Hakkımda</span><span data-l="en">About</span></p>
+            <h2 id="about-title">
+              <span data-l="tr">Nasıl çalışıyorum.</span><span data-l="en">How I work.</span>
+            </h2>
+          </div>
           <div>
             <p class="about-text">
               <span data-l="tr"
@@ -1457,67 +826,75 @@
               <span data-l="tr">Türkçe (ana dil) · İngilizce</span
               ><span data-l="en">Turkish (native) · English</span>
             </p>
-          </div>
-          <div class="skills">
-            <div class="skill">
-              <h4><span data-l="tr">Backend</span><span data-l="en">Backend</span></h4>
-              <p>
-                C# · .NET 8 · ASP.NET Core Web API · EF Core · Dapper · RabbitMQ · Python · FastAPI
-              </p>
-            </div>
-            <div class="skill">
-              <h4><span data-l="tr">Frontend</span><span data-l="en">Frontend</span></h4>
-              <p>React · TypeScript · Vite · Zustand · TanStack Query</p>
-            </div>
-            <div class="skill">
-              <h4><span data-l="tr">Veri</span><span data-l="en">Data</span></h4>
-              <p>MSSQL · T-SQL · Memgraph</p>
-            </div>
-            <div class="skill">
-              <h4>
-                <span data-l="tr">Bulut ve DevOps</span><span data-l="en">Cloud & DevOps</span>
-              </h4>
-              <p>
-                Azure (Blob Storage, Document Intelligence, Logic Apps) · AWS · GitLab CI/CD · IIS
-              </p>
-            </div>
-            <div class="skill">
-              <h4><span data-l="tr">Otomasyon</span><span data-l="en">Automation</span></h4>
-              <p>Power Automate · PowerShell · eBA BPM</p>
-            </div>
-            <div class="skill">
-              <h4><span data-l="tr">Yapay zekâ</span><span data-l="en">AI</span></h4>
-              <p>LLM · RAG / GraphRAG · OCR</p>
+            <div class="skills">
+              <div class="skill">
+                <h3>Backend</h3>
+                <p>
+                  C# · .NET 8 · ASP.NET Core Web API · EF Core · Dapper · RabbitMQ · Python ·
+                  FastAPI · Hono
+                </p>
+              </div>
+              <div class="skill">
+                <h3>Frontend</h3>
+                <p>React · TypeScript · Vite · Zustand · TanStack Query · React Flow</p>
+              </div>
+              <div class="skill">
+                <h3><span data-l="tr">Veri</span><span data-l="en">Data</span></h3>
+                <p>MSSQL · T-SQL · Memgraph · Cloudflare D1</p>
+              </div>
+              <div class="skill">
+                <h3>
+                  <span data-l="tr">Bulut ve DevOps</span
+                  ><span data-l="en">Cloud &amp; DevOps</span>
+                </h3>
+                <p>
+                  Azure (Blob Storage, Document Intelligence, Logic Apps) · AWS · Cloudflare Workers
+                  · GitLab CI/CD · GitHub Actions · IIS
+                </p>
+              </div>
+              <div class="skill">
+                <h3><span data-l="tr">Otomasyon</span><span data-l="en">Automation</span></h3>
+                <p>Power Automate · PowerShell · eBA BPM</p>
+              </div>
+              <div class="skill">
+                <h3><span data-l="tr">Yapay zekâ</span><span data-l="en">AI</span></h3>
+                <p>LLM · RAG / GraphRAG · OCR · Structured outputs</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Contact -->
       <section id="contact" class="contact" aria-labelledby="contact-title">
-        <div class="wrap">
-          <p class="section-kicker">
-            <span data-l="tr">İletişim</span><span data-l="en">Contact</span>
-          </p>
+        <div class="wrap contact-inner">
+          <p class="kicker"><span data-l="tr">İletişim</span><span data-l="en">Contact</span></p>
           <h2 id="contact-title">
-            <span data-l="tr">Konuşalım.</span><span data-l="en">Let’s talk.</span>
+            <span data-l="tr">Birlikte bir şey yapalım.</span
+            ><span data-l="en">Let’s build something.</span>
           </h2>
           <a class="email" href="mailto:oguz.soykan03@gmail.com" id="email-address"
             >oguz.soykan03@gmail.com</a
           >
-          <div class="copy-row">
-            <button type="button" class="copy-button" id="copy-email">
-              <span data-l="tr">Adresi kopyala</span><span data-l="en">Copy email</span></button
-            ><span id="copy-status" class="copy-status" role="status" aria-live="polite"></span>
+          <div class="contact-actions">
+            <button type="button" class="button primary" id="copy-email">
+              <span data-l="tr">Adresi kopyala</span><span data-l="en">Copy email</span>
+            </button>
+            <a class="button on-dark" href="https://www.linkedin.com/in/oguzsoykan">LinkedIn ↗</a>
+            <a class="button on-dark" href="https://github.com/OguzSoykan">GitHub ↗</a>
           </div>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/oguzsoykan">LinkedIn</a
-            ><a href="https://github.com/OguzSoykan">GitHub</a>
-          </div>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
         </div>
       </section>
     </main>
-    <footer class="wrap">
-      <span>© <span id="year">2026</span> Oğuz Soykan</span
-      ><span>İstanbul · .NET / React / RPA</span>
+    <footer class="wrap footer">
+      <span>© <span id="year">2026</span> Oğuz Soykan</span>
+      <span>
+        <a href="https://workflow.oguzsoykan.com/">workflow.oguzsoykan.com</a> ·
+        <a href="https://github.com/OguzSoykan/oguzsoykan.com"
+          ><span data-l="tr">Bu sitenin kaynağı</span><span data-l="en">Site source</span></a
+        >
+      </span>
     </footer>
     <script src="assets/app.js" defer></script>
   </body>

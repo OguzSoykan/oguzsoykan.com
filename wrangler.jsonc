@@ -7,4 +7,11 @@
   "routes": [{ "pattern": "oguzsoykan.com", "custom_domain": true }],
   "workers_dev": false,
   "preview_urls": false,
+  "env": {
+    // Review deployments before they replace the live root domain.
+    "preview": {
+      "name": "oguzsoykan-preview",
+      "routes": [{ "pattern": "preview.oguzsoykan.com", "custom_domain": true }],
+    },
+  },
 }

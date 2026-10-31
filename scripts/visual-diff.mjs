@@ -15,7 +15,12 @@ for (const [name, width, height, colorScheme, locale] of [
 ]) {
   const shots = [];
   for (const origin of [local, reference]) {
-    const context = await browser.newContext({ viewport: { width, height }, colorScheme, locale, reducedMotion: 'reduce' });
+    const context = await browser.newContext({
+      viewport: { width, height },
+      colorScheme,
+      locale,
+      reducedMotion: 'reduce',
+    });
     const page = await context.newPage();
     await page.goto(origin, { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
